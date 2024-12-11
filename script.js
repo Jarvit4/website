@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (password.value.trim() === '') {
             passwordError.style.display = 'block';
             isValid = false;
+        } else if (password.value.trim().length < 6) {
+            passwordError.textContent = 'Пароль повинен містити щонайменше 6 символів.';
+            passwordError.style.display = 'block';
+            isValid = false;
         }
 
         if (!isValid) {
