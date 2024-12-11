@@ -59,3 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(String(email).toLowerCase());
     }
 });
+document.getElementById('showPassword').addEventListener('change', function() {
+    password.type = this.checked ? 'text' : 'password';
+});
+
